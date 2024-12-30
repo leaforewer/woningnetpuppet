@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Varela Round";
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url(./fonts/font.woff2) format("woff2");
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
+    font-family: "Varela Round", sans-serif;
+}
+
+@layer base {
+    html {
+        @apply text-white bg-neutral-950;
+    }
+
+    .d-outer {
+        @apply py-4 lg:px-5 lg:py-[60px] xl:px-7;
+    }
+
+    .d-inner {
+        @apply max-w-[calc(100vw-1rem)] lg:container xl:max-w-[1400px];
+        margin: 0 auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-semibold;
+    }
+
+    h1 {
+        @apply text-4xl lg:text-5xl;
+    }
+
+    h2,
+    h2 span {
+        @apply text-3xl lg:text-4xl;
+    }
+
+    h3 {
+        @apply text-2xl lg:text-3xl;
+    }
+
+    h4 {
+        @apply text-xl lg:text-2xl;
+    }
+
+    h5 {
+        @apply text-lg lg:text-xl;
+    }
+
+    h6 {
+        @apply text-base lg:text-lg;
+    }
+
+    p,
+    li,
+    a,
+    span,
+    div,
+    input,
+    button,
+    label {
+        @apply text-sm lg:text-base/7;
+    }
+
+    a {
+        @apply text-green-500;
+    }
+
+    input:focus-visible,
+    textarea:focus-visible,
+    select:focus-visible,
+    button:focus-visible {
+        outline: none 0;
+    }
+}

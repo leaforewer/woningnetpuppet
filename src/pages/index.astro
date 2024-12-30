@@ -1,0 +1,17 @@
+---
+import HouseAssigner from '@components/HouseAssigner.vue';
+import Layout from '../layouts/Layout.astro';
+export const prerender = false;
+---
+
+<Layout>
+    <div class="d-outer lg:py-40">
+        <div class="d-inner">
+            <h1 class="text-center mb-3">Woningnet Utrecht automatisation</h1>
+            <p class="mb-10 lg:mb-16 text-center">Fill in your username and password to begin process..</p>
+            <div class="max-w-lg mx-auto flex flex-col items-center">
+            <HouseAssigner client:idle />
+            </div>
+        </div>
+    </div>
+</Layout>
